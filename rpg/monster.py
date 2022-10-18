@@ -13,13 +13,13 @@ class Monster():
         self.xp = 0
 
     def roll_to_hit(self):
-        pass
+        return 15
 
     def roll_for_damage(self):
-        pass
+        return 4
 
     def get_ac(self):
-        pass
+        return 12
 
     def get_movement(self):
         pass

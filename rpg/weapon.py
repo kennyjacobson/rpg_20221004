@@ -7,7 +7,7 @@ class Weapon():
         self.weight = 0
         self.size = 0
         self.l_d = 1
-        self.h_d = 4
+        self.h_d = 4 
         #everything is 0 because if theres no weapon there is nothing :)
 
     def load(self, path):    

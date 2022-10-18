@@ -1,4 +1,6 @@
 from rpg.character import Character
+from rpg.combat import Combat
+from rpg.monster import Monster
 from rpg.weapon import Weapon
 from rpg.armor import Armor
 from utils.generator import Generator
@@ -14,11 +16,33 @@ from utils.generator import Generator
 # chainmail.load('armor/chainmail.json')
 # print(chainmail.name)
 
+def ply_function(result):
+    print("Hi, I'm the ply function")
+    print(result)
 
-# dalinar = Character()
-# dalinar.load_from_json("characters/dalinar.json")
-# print(dalinar.name, dalinar.strength)
+def end_game_function(winner):
+    print(winner)
+    print("Game OVer.")
 
-generator =  Generator()
-new_character = generator.character()
-print(new_character.hit_p_max, new_character.intel)
+
+dalinar = Character()
+dalinar.load_from_json("characters/dalinar.json")
+print(dalinar.name, dalinar.strength, dalinar.intel, dalinar.race)
+
+monster = Monster()
+monster.name = "Skeleton"
+monster.hit_p_max = 4
+monster.l_d = 1
+monster.l_h = 4
+
+game = Combat([dalinar], [monster], ply_function, end_game_function)
+game.start()
+
+
+# j = Character()
+# j.load_from_json("characters/jasnah.json")
+# print(j.name, j.strength, j.intel, j.race)
+
+# generator =  Generator()
+# new_character = generator.character()
+# print(new_character.hit_p_max, new_character.intel, new_character.race, new_character.p_class)

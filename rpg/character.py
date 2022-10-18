@@ -44,16 +44,19 @@ class Character():
         pass
     
     def roll_to_hit(self):
-        pass
+        return 15
 
     def roll_for_damage(self):
-        pass
+        return 4
 
     def get_ac(self):
-        pass
+        return 13
 
     def get_movement(self):
         pass
 
     def get_ability_bonuses(self):
+        pass
+
+    def save_character_to_file(self):
         pass
