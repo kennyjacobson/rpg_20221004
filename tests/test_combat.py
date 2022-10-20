@@ -4,7 +4,11 @@ from rpg.character import Character
 class Test_combat(unittest.TestCase):
 
     def test_character_creation(self):
-        #New Blank Character
+        """
+        GIVEN a Character institation with no parameters
+        WHEN a Character is instantiated
+        THEN the new object should have certain default
+        """
         char1 = Character()
         self.assertEqual(char1.name, "player")
 
