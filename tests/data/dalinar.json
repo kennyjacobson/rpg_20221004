@@ -1,0 +1,15 @@
+{
+    "name" : "Dalinar",
+    "strength" : 15,
+    "intel" : 10,        
+    "wisdom": 13,
+    "dexterity" : 15,
+    "constitution" : 7,
+    "charisma" : 18,
+    "race" : "Dwarf",
+    "p_class" : "Fighter",
+    "level" : 4,
+    "hit_p_max" : 24,
+    "movement" : 30,
+    "xp" : 4000
+}

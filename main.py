@@ -17,8 +17,13 @@ from utils.generator import Generator
 # print(chainmail.name)
 
 def ply_function(result):
-    print("Hi, I'm the ply function")
-    print(result)
+    #print("Hi, I'm the ply function")
+    #value = input("Roll the dice.")
+
+    if(result.get("hit")):
+        print(f'{result.get("attacker_name")} scored a hit. {result.get("defender_name")} now has {result.get("defender_hp")}  hit points left.')
+    else:
+        print(f'{result.get("attacker_name")} missed.')
 
 def end_game_function(winner):
     print(winner)
@@ -31,12 +36,14 @@ print(dalinar.name, dalinar.strength, dalinar.intel, dalinar.race)
 
 monster = Monster()
 monster.name = "Skeleton"
-monster.hit_p_max = 4
+monster.hit_p_max = 8
 monster.l_d = 1
 monster.l_h = 4
 
-game = Combat([dalinar], [monster], ply_function, end_game_function)
-game.start()
+for x in range(1000):
+    game = Combat([dalinar], [monster], ply_function, end_game_function)
+
+    game.start()
 
 
 # j = Character()

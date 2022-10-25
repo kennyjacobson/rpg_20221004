@@ -1,4 +1,6 @@
 import json
+import random
+
 class Character():
     def __init__(self):
         self.name = "player"
@@ -44,13 +46,22 @@ class Character():
         pass
     
     def roll_to_hit(self):
-        return 15
+        return random.randint(3,18)
 
     def roll_for_damage(self):
-        return 4
+        return  random.randint(1,5)
 
     def get_ac(self):
-        return 13
+        if self.race == "Human":
+            return 14
+        elif self.race == "Kobold":
+            return 13
+        elif self.race == "Dwarf":
+            return 15
+        elif self.race == "Elf":
+            return 16
+        else:
+            return 10
 
     def get_movement(self):
         pass

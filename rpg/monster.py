@@ -1,3 +1,5 @@
+import random
+
 class Monster():
     def __init__(self):
         #l_d = low damage
@@ -13,10 +15,10 @@ class Monster():
         self.xp = 0
 
     def roll_to_hit(self):
-        return 15
+        return random.randint(3,18)
 
     def roll_for_damage(self):
-        return 4
+        return random.randint(1,4)
 
     def get_ac(self):
         return 12
